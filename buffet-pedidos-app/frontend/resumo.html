@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo do Pedido</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/images/logo nalvabuffet.png" alt="Logo do Buffet">
+    </header>
+
+    <main>
+        <h1>Resumo do Pedido</h1>
+        
+        <div id="pedido-resumo">
+            <p>Nome: <span id="nome-evento-resumo"></span></p>
+            <p>Data do Evento: <span id="data-evento-resumo"></span></p>
+            <p>Hora do Evento: <span id="hora-evento-resumo"></span></p>
+            <p>Itens do Pedido:</p>
+            <ul id="itens-pedido">
+                <!-- Os itens do pedido serão listados aqui -->
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <input type="image" src="assets/images/botão de adicionar itens.png" alt="Adicionar Itens" class="button-image" onclick="window.location.href='index.html'">
+            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" onclick="window.location.href='finalizar.html'">
+        </div>
+    </main>
+
+</body>
+</html>

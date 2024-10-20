@@ -1,0 +1,134 @@
+@font-face {
+ font-family: 'Agenor Thin';
+ src: url('assets/fonts/agenor-thin.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+ background-color: #FDEECD; /* Cor de fundo */
+ font-family: 'Agenor Thin', sans-serif; /* Fonte personalizada */
+ color: #333; /* Cor do texto */
+ margin: 0; /* Remove margens padrão */
+ padding: 0; /* Remove preenchimento padrão */
+ display: flex; /* Usa flexbox */
+ flex-direction: column; /* Alinha itens em coluna */
+ align-items: center; /* Centraliza na horizontal */
+ justify-content: flex-start; /* Alinha no topo */
+ height: 100vh; /* Altura da tela */
+}
+
+/* Centraliza a logo no topo */
+header {
+ width: 100%;
+ padding: 20px; /* Espaçamento ao redor do cabeçalho */
+ display: flex; /* Usa flexbox para o cabeçalho */
+ justify-content: center; /* Centraliza horizontalmente */
+ align-items: center; /* Centraliza verticalmente */
+}
+
+/* Define o tamanho da logo */
+header img {
+ max-width: 500px; /* Ajuste o tamanho da logo conforme necessário */
+ height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo do conteúdo principal */
+main {
+ padding: 20px;
+ width: 100%;
+ max-width: 400px; /* Largura máxima do conteúdo */
+ display: flex;
+ flex-direction: column; /* Alinha itens em coluna */
+ align-items: center; /* Centraliza todos os itens */
+}
+
+/* Título */
+h1 {
+ text-align: center; /* Centraliza o título */
+ margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo do formulário */
+form {
+ display: flex; /* Usa flexbox para o formulário */
+ flex-direction: column; /* Alinha campos em coluna */
+ gap: 15px; /* Espaçamento entre os campos */
+ width: 100%; /* Para que o formulário ocupe toda a largura disponível */
+ align-items: center; /* Centraliza todos os itens, incluindo o botão */
+}
+
+/* Estilo dos rótulos e inputs */
+label {
+ font-size: 16px; /* Tamanho da fonte do rótulo */
+ margin-bottom: 5px; /* Espaçamento inferior */
+ text-align: center; /* Centraliza o texto do rótulo */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+ padding: 10px; /* Preenchimento interno dos campos */
+ font-size: 16px; /* Tamanho da fonte do input */
+ border-radius: 5px; /* Bordas arredondadas */
+ border: 1px solid #ccc; /* Cor da borda */
+ width: 100%; /* Faz o input ocupar toda a largura disponível */
+}
+
+/* Estilo do cardápio */
+#cardapio {
+ margin-top: 20px; /* Espaçamento entre o formulário e o cardápio */
+}
+
+h2 {
+ text-align: left; /* Alinha os subtítulos à esquerda */
+}
+
+/* Remove pontos de listas */
+ul, ol {
+ list-style-type: none; /* Remove marcadores de listas */
+ padding: 0; /* Remove preenchimento padrão */
+ margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo dos botões de imagem */
+.button-image {
+ width: var(--tamanho-botao, 300px); /* Tamanho da imagem com variável CSS */
+ height: auto; /* Mantém a proporção da imagem */
+ border: none; /* Remove bordas padrão */
+ cursor: pointer; /* Muda o cursor para indicar que é clicável */
+ transition: transform 0.2s; /* Animação suave ao passar o mouse */
+ background: none; /* Remove fundo padrão se houver */
+ margin: 10px 0; /* Adiciona um espaçamento vertical de 10px entre os botões */
+}
+
+.button-image:hover {
+ transform: scale(1.05); /* Aumenta a imagem quando o mouse passa por cima */
+}
+
+/* Estilo dos rótulos e inputs */
+.salgado-item, .doces-itens {
+ display: flex; /* Usa flexbox para alinhas os itens */
+ align-items: center; /* Centraliza verticalmente */
+ justify-content: space-between; /* Espaça os itens */
+ margin-bottom: 15px; /* Espaçamento entre os itens */
+ margin: 15px 0;
+ margin-right: 10px;
+}
+
+input[type="checkbox"] {
+ width: 20px; /* Tamanho do checkbox */
+ height: 20px; /* Tamanho do checkbox */
+ cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.button-container {
+ display: flex; /* Usa flexbox para os botões */
+ flex-direction: column; /* Alinha os botões em coluna */
+ align-items: center; /* Centraliza os botões horizontalmente */
+ margin-top: 20px; /* Espaçamento superior para separar dos itens do pedido */
+}
+
+.button-container input {
+ margin: 10px 0; /* Espaçamento entre os botões */
+}
