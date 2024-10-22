@@ -14,8 +14,8 @@
 
     <main>
         <h1>Resumo do Pedido</h1>
-        
-        <form id="evento-form" onsubmit="return handleSubmit(event)">
+
+        <form id="evento-form">
             <label for="nome-evento">Nome:</label>
             <input type="text" id="nome-evento" placeholder="Digite seu nome" required>
 
@@ -26,56 +26,23 @@
             <input type="time" id="hora-evento" required>
         </form>
 
-        <div class="quantidade-container">
-            <h2>Quantidades</h2>
-            <div id="quantidades-salgados">
-                <h3>Quantidades de Salgados</h3>
-                <ul id="salgados-lista">
-                    <!-- Os nomes dos salgados serão listados aqui -->
-                </ul>
-            </div>
-            <div id="quantidades-doces">
-                <h3>Quantidades de Doces</h3>
-                <ul id="doces-lista">
-                    <!-- Os nomes dos doces serão listados aqui -->
-                </ul>
-            </div>
+        <!-- Exibição dos salgados selecionados -->
+        <div id="salgados-selecionados">
+            <h2 id="salgados-selecionados-titulo">Salgados Selecionados</h2>
+            <ul id="lista-salgados-selecionados"></ul>
+        </div>
+
+        <!-- Exibição dos doces selecionados -->
+        <div id="doces-selecionados">
+            <h2 id="doces-selecionados-titulo">Doces Selecionados</h2>
+            <ul id="lista-doces-selecionados"></ul>
         </div>
 
         <div class="button-container">
-            <input type="image" src="assets/images/botão de adicionar itens.png" alt="Adicionar Itens" class="button-image" onclick="window.location.href='index.html'">
-            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" onclick="finalizarPedido()">
+            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" id="botao-finalizar">
         </div>
+
+        <script src="scripts/resumo.js"></script>
     </main>
-
-    <script>
-        // Função para exibir os salgados selecionados
-        function exibirSalgados() {
-            const listaSalgados = document.getElementById('salgados-lista');
-            const salgados = JSON.parse(localStorage.getItem('salgadosSelecionados')) || []; // Obtém os salgados do localStorage
-
-            salgados.forEach(salgado => {
-                const li = document.createElement('li');
-                li.textContent = salgado; // Adiciona o nome do salgado à lista
-                listaSalgados.appendChild(li);
-            });
-        }
-
-        // Função para exibir os doces selecionados
-        function exibirDoces() {
-            const listaDoces = document.getElementById('doces-lista');
-            const doces = JSON.parse(localStorage.getItem('docesSelecionados')) || []; // Obtém os doces do localStorage
-
-            doces.forEach(doce => {
-                const li = document.createElement('li');
-                li.textContent = doce; // Adiciona o nome do doce à lista
-                listaDoces.appendChild(li);
-            });
-        }
-
-        // Chama as funções para exibir os itens na página
-        exibirSalgados();
-        exibirDoces();
-    </script>
 </body>
 </html>

@@ -1,36 +1,33 @@
-// Variáveis para armazenar os itens selecionados
-let salgadosSelecionados = [];
-let docesSelecionados = [];
+document.querySelector('.button-image').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
 
-// Função para atualizar a lista de salgados selecionados
-function atualizarSalgados() {
-    const checkboxesSalgados = document.querySelectorAll('input[name="salgado"]:checked');
-    salgadosSelecionados = [];
+    const salgadosSelecionados = [];
+    const docesSelecionados = [];
 
-    checkboxesSalgados.forEach((checkbox) => {
+    // Captura todos os checkboxes de salgados normais selecionados
+    document.querySelectorAll('#salgados-lista input[type="checkbox"]:checked').forEach((checkbox) => {
         salgadosSelecionados.push(checkbox.value);
     });
 
-    localStorage.setItem('salgadosSelecionados', JSON.stringify(salgadosSelecionados));
-}
+    // Captura todos os checkboxes de salgados de forno selecionados
+    document.querySelectorAll('#salgados-forno-lista input[type="checkbox"]:checked').forEach((checkbox) => {
+        salgadosSelecionados.push(checkbox.value);
+    });
 
-// Função para atualizar a lista de doces selecionados
-function atualizarDoces() {
-    const checkboxesDoces = document.querySelectorAll('input[name="doce"]:checked');
-    docesSelecionados = [];
-
-    checkboxesDoces.forEach((checkbox) => {
+    // Captura todos os checkboxes de doces finos selecionados
+    document.querySelectorAll('#doces-finos-lista input[type="checkbox"]:checked').forEach((checkbox) => {
         docesSelecionados.push(checkbox.value);
     });
 
+    // Captura todos os checkboxes de doces simples selecionados
+    document.querySelectorAll('#doces-simples-lista input[type="checkbox"]:checked').forEach((checkbox) => {
+        docesSelecionados.push(checkbox.value);
+    });
+
+    // Armazena os salgados e doces selecionados no localStorage
+    localStorage.setItem('salgadosSelecionados', JSON.stringify(salgadosSelecionados));
     localStorage.setItem('docesSelecionados', JSON.stringify(docesSelecionados));
-}
 
-// Adiciona event listeners aos checkboxes de salgados e doces
-document.querySelectorAll('input[name="salgado"]').forEach((checkbox) => {
-    checkbox.addEventListener('change', atualizarSalgados);
-});
-
-document.querySelectorAll('input[name="doce"]').forEach((checkbox) => {
-    checkbox.addEventListener('change', atualizarDoces);
+    // Redireciona para a página de resumo
+    window.location.href = 'resumo.html';
 });
