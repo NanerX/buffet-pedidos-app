@@ -15,21 +15,67 @@
     <main>
         <h1>Resumo do Pedido</h1>
         
-        <div id="pedido-resumo">
-            <p>Nome: <span id="nome-evento-resumo"></span></p>
-            <p>Data do Evento: <span id="data-evento-resumo"></span></p>
-            <p>Hora do Evento: <span id="hora-evento-resumo"></span></p>
-            <p>Itens do Pedido:</p>
-            <ul id="itens-pedido">
-                <!-- Os itens do pedido serão listados aqui -->
-            </ul>
+        <form id="evento-form" onsubmit="return handleSubmit(event)">
+            <label for="nome-evento">Nome:</label>
+            <input type="text" id="nome-evento" placeholder="Digite seu nome" required>
+
+            <label for="data-evento">Data do Evento:</label>
+            <input type="date" id="data-evento" required>
+
+            <label for="hora-evento">Hora do Evento:</label>
+            <input type="time" id="hora-evento" required>
+        </form>
+
+        <div class="quantidade-container">
+            <h2>Quantidades</h2>
+            <div id="quantidades-salgados">
+                <h3>Quantidades de Salgados</h3>
+                <ul id="salgados-lista">
+                    <!-- Os nomes dos salgados serão listados aqui -->
+                </ul>
+            </div>
+            <div id="quantidades-doces">
+                <h3>Quantidades de Doces</h3>
+                <ul id="doces-lista">
+                    <!-- Os nomes dos doces serão listados aqui -->
+                </ul>
+            </div>
         </div>
 
         <div class="button-container">
             <input type="image" src="assets/images/botão de adicionar itens.png" alt="Adicionar Itens" class="button-image" onclick="window.location.href='index.html'">
-            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" onclick="window.location.href='finalizar.html'">
+            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" onclick="finalizarPedido()">
         </div>
     </main>
 
+    <script>
+        // Função para exibir os salgados selecionados
+        function exibirSalgados() {
+            const listaSalgados = document.getElementById('salgados-lista');
+            const salgados = JSON.parse(localStorage.getItem('salgadosSelecionados')) || []; // Obtém os salgados do localStorage
+
+            salgados.forEach(salgado => {
+                const li = document.createElement('li');
+                li.textContent = salgado; // Adiciona o nome do salgado à lista
+                listaSalgados.appendChild(li);
+            });
+        }
+
+        // Função para exibir os doces selecionados
+        function exibirDoces() {
+            const listaDoces = document.getElementById('doces-lista');
+            const doces = JSON.parse(localStorage.getItem('docesSelecionados')) || []; // Obtém os doces do localStorage
+
+            doces.forEach(doce => {
+                const li = document.createElement('li');
+                li.textContent = doce; // Adiciona o nome do doce à lista
+                listaDoces.appendChild(li);
+            });
+        }
+
+        // Chama as funções para exibir os itens na página
+        exibirSalgados();
+        exibirDoces();
+    </script>
 </body>
 </html>

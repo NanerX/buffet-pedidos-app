@@ -14,51 +14,263 @@
 
     <main>
         <h1>Bem-vindo ao Buffet!</h1>
-        
-        <form id="evento-form" onsubmit="return handleSubmit(event)">
-            <label for="nome-evento">Nome:</label>
-            <input type="text" id="nome-evento" placeholder="Digite seu nome" required>
 
-            <label for="data-evento">Data do Evento:</label>
-            <input type="date" id="data-evento" required>
-
-            <label for="hora-evento">Hora do Evento:</label>
-            <input type="time" id="hora-evento" required>
-
-            <input type="image" src="assets/images/botão de salvar.png" alt="Salvar" class="button-image">
-        </form>
 
         <nav>
-            <ul>
-                <li>
-                    <a href="salgados.html">
-                        <img src="assets/images/botão de cardápio de salgados.png" alt="Cardápio de Salgados" class="button-image">
-                    </a>
-                </li>
-                <li>
-                    <a href="doces.html">
-                        <img src="assets/images/botão de cardápio de doces.png" alt="Cardápio de Doces" class="button-image">
-                    </a>
-                </li>
-            </ul>
+            <h1>Cardápio Salgados</h1>
+        
+        <h2 id="salgados-fritos-titulo">Salgados de Fritura</h2>
+        <ul id="salgados-lista">
+            <li>
+                <div class="salgado-item">
+                    <span>Camarão Empanado</span>
+                    <input type="checkbox" id="camarao-empanado" value="Camarão Empanado">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Camarão Empanado na Tapioca</span>
+                    <input type="checkbox" id="camarao-empanado-tapioca" value="Camarão Empanado na Tapioca">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Croquete de Camarão</span>
+                    <input type="checkbox" id="croquete-camarao" value="Croquete de Camarão">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Bacalhau</span>
+                    <input type="checkbox" id="bacalhau" value="Bacalhau">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Bolinhos de Carne de Sol</span>
+                    <input type="checkbox" id="bolinho-carne-sol" value="Bolinhos de Carne de Sol">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Risole de Aratu</span>
+                    <input type="checkbox" id="risole-aratu" value="Risole de Aratu">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Coxinha</span>
+                    <input type="checkbox" id="coxinha" value="Coxinha">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Bolinha de Queijo</span>
+                    <input type="checkbox" id="bolinha-queijo" value="Bolinha de Queijo">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Peito de Peru</span>
+                    <input type="checkbox" id="peito-peru" value="Peito de Peru">
+                </div>
+            </li>
+        </ul>
+
+        <h2 id="salgados-forno-titulo">Salgados de Forno</h2>
+        <ul id="salgados-forno-lista">
+            <li>
+                <div class="salgado-item">
+                    <span>Pão de Queijo</span>
+                    <input type="checkbox" id="pao-queijo" value="Pão de Queijo">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Pão de Queijo com Recheio</span>
+                    <input type="checkbox" id="pao-queijo-recheio" value="Pão de Queijo com Recheio">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Canudinho de Frango</span>
+                    <input type="checkbox" id="canudinho-de-frango" value="Canudinho de Frango">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Canudinho de Camarão</span>
+                    <input type="checkbox" id="canudinho-de-camarao" value="Canudinho de Camarão">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Pastelzinho de Frango</span>
+                    <input type="checkbox" id="pastelzinho-de-frango" value="Pastelzinho de Camarão">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Pastelzinho de Camarão</span>
+                    <input type="checkbox" id="pastelzinho-de-camarao" value="Pastelzinho de Camarão">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Empada de Frango</span>
+                    <input type="checkbox" id="empada-de-frango" value="Empada de Frango">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Empada de Camarão</span>
+                    <input type="checkbox" id="empada-de-camarao" value="Empada de Camarão">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Barquete</span>
+                    <input type="checkbox" id="barquete" value="Barquete">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Canolle</span>
+                    <input type="checkbox" id="canolle" value="Canolle">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Crepnete</span>
+                    <input type="checkbox" id="crepnente" value="Crepnete">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Cormeguís</span>
+                    <input type="checkbox" id="cormeguis" value="Cormeguís">
+                </div>
+            </li>
+            <li>
+                <div class="salgado-item">
+                    <span>Casquinha de Aratu</span>
+                    <input type="checkbox" id="casquinha-aratu" value="Casquinha de Aratu">
+                </div>
+            </li>
+        </ul>
+        <h1>Cardápio de Doces</h1>
+        
+        <h2 id="doces-finos-titulo">Doces Finos (Banhados)</h2>
+        <ul id="doces-finos-lista">
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom Ameixa</span>
+                    <input type="checkbox" id="bombom-ameixa" value="Bombom Ameixa">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Amendoim</span>
+                    <input type="checkbox" id="bombom-amendoim" value="Bombom de Amendoim">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Castanha</span>
+                    <input type="checkbox" id="bombom-castanha" value="Bombom de Castanha">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Cereja</span>
+                    <input type="checkbox" id="bombom-cereja" value="Bombom de Cereja">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Damasco</span>
+                    <input type="checkbox" id="bombom-damasco" value="Bombom de Damasco">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Ninho</span>
+                    <input type="checkbox" id="bombom-ninho" value="Bombom de Ninho">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Nozes</span>
+                    <input type="checkbox" id="bombom-nozes" value="Bombom de Nozes">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Negresco</span>
+                    <input type="checkbox" id="bombom-negresco" value="Bombom de Negresco">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Prestígio</span>
+                    <input type="checkbox" id="bombom-prestigio" value="Bombom de Prestígio">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Bombom de Valsa</span>
+                    <input type="checkbox" id="bombom-valsa" value="Bombom de Valsa">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Trufa de Chocolate</span>
+                    <input type="checkbox" id="trufa-chocolate" value="Trufa de Chocolate">
+                </div>
+            </li>
+        </ul>
+
+        <h2 id="doces-simples-titulo">Doces Simples</h2>
+        <ul id="doces-simples-lista">
+            <li>
+                <div class="doces-itens">
+                    <span>Brigadeiro</span>
+                    <input type="checkbox" id="brigadeiro" value="Brigadeiro">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Cajuzinho</span>
+                    <input type="checkbox" id="cajuzinho" value="Cajuzinho">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Prestígio</span>
+                    <input type="checkbox" id="prestigio" value="Prestígio">
+                </div>
+            </li>
+            <li>
+                <div class="doces-itens">
+                    <span>Surpresa de Uva</span>
+                    <input type="checkbox" id="surpresa-uva" value="Surpresa de Uva">
+                </div>
+            </li>
+        </ul>
         </nav>
     </main>
 
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault(); // Impede o envio do formulário para tratar a lógica aqui
-            const nome = document.getElementById('nome-evento').value;
-            const data = document.getElementById('data-evento').value;
-            const hora = document.getElementById('hora-evento').value;
 
-            // Aqui você pode armazenar ou processar os dados como quiser
-            console.log('Nome:', nome);
-            console.log('Data:', data);
-            console.log('Hora:', hora);
+    <nav>
+        <ul>
+            <li>
+                <a href="resumo.html">
+                    <img src="assets/images/botão de proximo.png" alt="Resumo de Pedidos" class="button-image">
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-            // Redirecionar ou exibir mensagem após salvar, se necessário
-            // window.location.href = 'próxima_página.html';
-        }
-    </script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
