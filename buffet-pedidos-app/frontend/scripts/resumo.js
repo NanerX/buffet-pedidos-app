@@ -44,7 +44,15 @@ const precosDoces = {
 };
 // Recupera o nome do cliente e a data do evento do formulário
 const nomeCliente = document.getElementById('nome-evento').value || 'Cliente';
-const dataEvento = document.getElementById('data-evento').value || 'Data não informada';
+// Recupera a data do evento do formulário
+let dataEvento = document.getElementById('data-evento').value || 'Data não informada';
+
+// Verifica se a data foi informada
+if (dataEvento !== 'Data não informada') {
+    // Converte a data no formato 'aaaa-mm-dd' para 'dd/mm/aaaa'
+    const partesData = dataEvento.split('-'); // Divide a data em partes
+    dataEvento = `${partesData[2]}/${partesData[1]}/${partesData[0]}`; // Reordena para 'dd/mm/aaaa'
+}
 
 // Captura a hora do evento
 const horaEvento = document.getElementById('hora-evento').value || 'Hora não informada';
