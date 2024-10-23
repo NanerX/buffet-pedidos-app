@@ -14,22 +14,35 @@
 
     <main>
         <h1>Resumo do Pedido</h1>
-        
-        <div id="pedido-resumo">
-            <p>Nome: <span id="nome-evento-resumo"></span></p>
-            <p>Data do Evento: <span id="data-evento-resumo"></span></p>
-            <p>Hora do Evento: <span id="hora-evento-resumo"></span></p>
-            <p>Itens do Pedido:</p>
-            <ul id="itens-pedido">
-                <!-- Os itens do pedido serão listados aqui -->
-            </ul>
+
+        <form id="evento-form">
+            <label for="nome-evento">Nome:</label>
+            <input type="text" id="nome-evento" placeholder="Digite seu nome" required>
+
+            <label for="data-evento">Data do Evento:</label>
+            <input type="date" id="data-evento" required>
+
+            <label for="hora-evento">Hora do Evento:</label>
+            <input type="time" id="hora-evento" required>
+        </form>
+
+        <!-- Exibição dos salgados selecionados -->
+        <div id="salgados-selecionados">
+            <h2 id="salgados-selecionados-titulo">Salgados Selecionados</h2>
+            <ul id="lista-salgados-selecionados"></ul>
+        </div>
+
+        <!-- Exibição dos doces selecionados -->
+        <div id="doces-selecionados">
+            <h2 id="doces-selecionados-titulo">Doces Selecionados</h2>
+            <ul id="lista-doces-selecionados"></ul>
         </div>
 
         <div class="button-container">
-            <input type="image" src="assets/images/botão de adicionar itens.png" alt="Adicionar Itens" class="button-image" onclick="window.location.href='index.html'">
-            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" onclick="window.location.href='finalizar.html'">
+            <input type="image" src="assets/images/botão de finalizar pedido.png" alt="Finalizar Pedido" class="button-image" id="botao-finalizar">
         </div>
-    </main>
 
+        <script src="scripts/resumo.js"></script>
+    </main>
 </body>
 </html>
