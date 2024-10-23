@@ -1,56 +1,3 @@
-/* Estilos gerais para telas menores */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    header {
-        padding: 10px;
-    }
-
-    header img {
-        max-width: 100%; /* Deixa a logo responsiva */
-    }
-
-    main {
-        padding: 10px;
-        max-width: 100%; /* Largura máxima para telas menores */
-    }
-
-    form {
-        gap: 10px; /* Reduz o espaçamento entre os campos */
-    }
-
-    input[type="text"],
-    input[type="date"],
-    input[type="time"],
-    input[type="number"] {
-        font-size: 14px; /* Diminui o tamanho da fonte para caber melhor na tela */
-        padding: 8px; /* Ajusta o padding para campos menores */
-    }
-
-    .button-image {
-        width: var(--tamanho-botao, 200px); /* Reduz o tamanho dos botões de imagem para celulares */
-    }
-
-    .button-container input {
-        font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
-    }
-
-    .salgado-item, .doces-itens {
-        flex-direction: column; /* Coloca os itens em coluna em vez de lado a lado */
-        align-items: center; /* Centraliza os itens */
-    }
-
-    .salgado-item input[type="checkbox"] {
-        width: 18px; /* Reduz o tamanho do checkbox para telas menores */
-        height: 18px;
-    }
-
-    label {
-        font-size: 14px; /* Ajusta o tamanho dos rótulos */
-    }
-}
 @font-face {
     font-family: 'Agenor Thin';
     src: url('assets/fonts/agenor-thin.ttf') format('truetype');
@@ -147,9 +94,9 @@ ul, ol {
     padding: 0; /* Remove preenchimento padrão */
     margin: 0; /* Remove margens padrão */
     margin-bottom: 5px; /* Espaçamento inferior */
-
     text-align: center; /* Centraliza o texto do rótulo */
 }
+
 /* Estilo dos botões de imagem */
 .button-image {
     width: var(--tamanho-botao, 300px); /* Tamanho da imagem com variável CSS */
@@ -190,4 +137,58 @@ input[type="checkbox"] {
 
 .button-container input {
     margin: 10px 0; /* Espaçamento entre os botões */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        max-width: 100%; /* Deixa a logo responsiva */
+    }
+
+    main {
+        padding: 10px;
+        max-width: 100%; /* Largura máxima para telas menores */
+    }
+
+    form {
+        gap: 10px; /* Reduz o espaçamento entre os campos */
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"] {
+        font-size: 14px; /* Diminui o tamanho da fonte para caber melhor na tela */
+        padding: 8px; /* Ajusta o padding para campos menores */
+    }
+
+    .button-image {
+        width: var(--tamanho-botao, 200px); /* Reduz o tamanho dos botões de imagem para celulares */
+    }
+
+    .button-container input {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
+    }
+
+    .salgado-item, .doces-itens {
+        flex-direction: column; /* Coloca os itens em coluna em vez de lado a lado */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .salgado-item input[type="checkbox"] {
+        width: 18px; /* Reduz o tamanho do checkbox para telas menores */
+        height: 18px;
+    }
+
+    label {
+        font-size: 14px; /* Ajusta o tamanho dos rótulos */
+    }
 }
