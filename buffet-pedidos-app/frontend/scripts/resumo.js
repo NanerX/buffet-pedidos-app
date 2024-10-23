@@ -42,14 +42,8 @@ const precosDoces = {
         "Prestígio": 1.40,
         "Surpresa de Uva": 1.40
 };
-<<<<<<< HEAD
 // Mensagem formatada para o WhatsApp
 const nomeCliente = document.getElementById('nome-evento').value || 'Cliente';
-=======
-// Recupera o nome do cliente e a data do evento do formulário
-const nomeCliente = document.getElementById('nome-evento').value || 'Cliente';
-// Recupera a data do evento do formulário
->>>>>>> 6187f30997d7a4637b4dd766de13b4514ed2828a
 let dataEvento = document.getElementById('data-evento').value || 'Data não informada';
 
 // Verifica se a data foi informada
@@ -65,10 +59,6 @@ const horaEvento = document.getElementById('hora-evento').value || 'Hora não in
 // Mensagem formatada para o WhatsApp
 let mensagem = `Orçamento de ${nomeCliente} para a data ${dataEvento} às ${horaEvento}:\n\n`;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6187f30997d7a4637b4dd766de13b4514ed2828a
 // Recupera os salgados e doces selecionados do localStorage
 const salgadosSelecionados = JSON.parse(localStorage.getItem('salgadosSelecionados')) || [];
 const docesSelecionados = JSON.parse(localStorage.getItem('docesSelecionados')) || [];
@@ -151,11 +141,7 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     mensagem += `\nValor total do orçamento: R$ ${valorTotal.toFixed(2)}\n`;
 
     // Número de WhatsApp (substitua pelo seu número)
-<<<<<<< HEAD
     const numeroWhatsApp = '5579998358788'; // Exemplo: +55 11 99999-9999
-=======
-    const numeroWhatsApp = '557999169957'; // Exemplo: +55 11 99999-9999
->>>>>>> 6187f30997d7a4637b4dd766de13b4514ed2828a
     const baseUrl = 'https://wa.me/';
     
     // Enviar mensagem via WhatsApp
